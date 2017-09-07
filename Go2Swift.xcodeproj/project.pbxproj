@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845CA7A61F6166EF00989143 /* echo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 845CA7A31F6166B800989143 /* echo.a */; };
+		845CA7A91F617A6100989143 /* echo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 845CA7A81F617A6100989143 /* echo.a */; };
 		8489BF741F61455300630190 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489BF731F61455300630190 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		845CA7A31F6166B800989143 /* echo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = echo.a; path = Module/echo.a; sourceTree = "<group>"; };
+		845CA7A81F617A6100989143 /* echo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = echo.a; path = echo/echo.a; sourceTree = "<group>"; };
 		8489BF701F61455300630190 /* Go2Swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Go2Swift; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489BF731F61455300630190 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,19 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845CA7A61F6166EF00989143 /* echo.a in Frameworks */,
+				845CA7A91F617A6100989143 /* echo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845CA7A71F617A6000989143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845CA7A81F617A6100989143 /* echo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8489BF671F61455300630190 = {
 			isa = PBXGroup;
 			children = (
 				845CA7A31F6166B800989143 /* echo.a */,
 				8489BF721F61455300630190 /* Go2Swift */,
 				8489BF711F61455300630190 /* Products */,
+				845CA7A71F617A6000989143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,9 +237,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module",
+					"$(PROJECT_DIR)/echo",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Module";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/echo";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -240,9 +251,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Module",
+					"$(PROJECT_DIR)/echo",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Module";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/echo";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
